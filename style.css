@@ -1,0 +1,511 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #1a1a1a;
+  color: #fff;
+  background-image: url("une\ image\ style\ bd\ représentant\ une\ vallée\ remplie\ de\ dinosaures.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* ← on gère le scroll manuellement */
+  background-position: center center;
+  transition: background-position 0.5s ease-out;
+}
+
+/* NAVIGATION */
+
+header {
+  background: linear-gradient(135deg, #3CA55C, #B5AC49, #3CA5A5);
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+nav {
+  background: linear-gradient(135deg, #3CA55C, #B5AC49, #3CA5A5);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+nav h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem; /* ← Ajuste ici si tu veux encore plus grand */
+  margin-left: 1.5rem;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #FFA500
+}
+
+/* SECTION PRINCIPALE AVEC IMAGE DE FOND */
+.main-section {
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.185); /* assombrit le fond pour la lisibilité */
+  z-index: 0;
+}
+
+.main-section .content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  text-align: center;
+}
+
+.main-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.main-section p {
+  font-size: 1.2rem;
+}
+
+.content {
+  background-color: rgba(34, 133, 50, 0.336);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button {
+  background-color: #FFD700;
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e69500;
+  transform: scale(1.05);
+}
+
+footer {
+  background: linear-gradient(135deg, #3CA55C, #B5AC49, #3CA5A5);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/*PAGE DINOSAURES*/
+
+.page-dinosaures {
+    position: relative;
+    background-image: url("Un\ volcan\ préhistorique\ en\ dessin\ style\ bd.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.page-dinosaures::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25); /* valeur de départ */
+    pointer-events: none; /* clics possibles à travers */
+    transition: background 0.2s ease-out; /* transition douce */
+}
+
+.page-dinosaures::before {
+    background: rgba(0, 0, 0, var(--overlay-opacity, 0.25));
+}
+
+header nav {
+  background: none;      /* Supprime toute couleur de fond */
+  border: none;          /* Supprime toute bordure éventuelle */
+  padding: 0;            /* Supprime tout espace intérieur */
+  margin: 0;             /* Supprime les marges si présentes */
+  box-shadow: none;      /* Supprime toute ombre éventuelle */
+}
+
+header nav a {
+  margin-left: 1.5rem; /* espace entre les liens */
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:first-child {
+  margin-left: 0; /* supprime la marge à gauche du premier lien */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dinosaurs-page {
+  padding: 2rem;
+  backdrop-filter: brightness(0.95);
+}
+
+.dino-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: rgba(255, 248, 235, 0.651);
+  border-radius: 12px;
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.dino-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(139, 69, 19, 0.13); /* brun léger */
+  padding: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.dino-card:hover {
+  transform: scale(1.03);
+}
+
+.dino-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 3px solid #8B4513; /* brun préhisto */
+}
+
+.dino-card h3 {
+  font-size: 1.3rem;
+  margin-top: 0.8rem;
+  color: #3a2e1f;
+  font-family: 'Papyrus', 'Trebuchet MS', sans-serif; /* pour un effet vieilli */
+}
+
+.dino-card p {
+  font-size: 1rem;
+  color: #4b3b2c;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+.btn-dino {
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 14px;
+}
+
+.btn-dino:hover {
+    background-color: #8b1a1a;
+}
+
+/*PAGE QUIZ*/
+
+.page-quiz {
+  background: url('une\ image\ style\ bd\ représentant\ une\ vallée\ remplie\ de\ dinosaures\ \(2\).jpeg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 80px auto;
+  background: rgba(0, 25, 48, 0.452);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  font-size: 1.2em;
+}
+
+.quiz-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.quiz-container label {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.question {
+  margin-bottom: 40px;
+  text-align: center;
+  background: rgba(3, 0, 41, 0.4);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.question h2,
+.question label {
+  color: #fff;
+}
+
+.question p {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.options {
+  display: inline-block;
+  text-align: left;
+}
+
+.options label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.options label:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #c49b63, 0 0 15px #c49b63;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 15px 10px;
+  background-color: #fffb00;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #e69500;
+  transform: scale(1.05);
+}
+
+.result {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+
+/* Tablettes et écrans moyens */
+@media (max-width: 992px) {
+  nav h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .main-section h2 {
+    font-size: 2rem;
+  }
+
+  .main-section p {
+    font-size: 1rem;
+  }
+
+  .quiz-container {
+    margin: 50px 20px;
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .dino-card {
+    max-width: 250px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center; /* ← centre tous les liens */
+    gap: 15px; /* espace entre eux */
+    padding: 0;
+    margin: 0 auto; /* force le centrage */
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center; /* ← centre chaque lien */
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    margin-left: 0;
+    display: inline-block;
+    width: auto; /* pas toute la largeur */
+  }
+
+  .main-section {
+    padding: 60px 15px;
+  }
+
+  .main-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .main-section p {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .dino-section {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .dino-card {
+    max-width: 100%;
+  }
+
+  .quiz-container {
+    margin: 40px 15px;
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}
+
+/* Petits mobiles (iPhone SE, etc.) */
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    gap: 5px;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .main-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-section p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .quiz-container {
+    font-size: 0.9rem;
+  }
+
+  .question p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

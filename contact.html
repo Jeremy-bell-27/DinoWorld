@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - DinoWorld</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* --- Fond et structure --- */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: url("contact\ email.jpeg") center center / cover no-repeat fixed;
+      background-attachment: fixed;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    /* --- Navigation --- */
+    nav {
+      background: linear-gradient(135deg, #3CA55C, #B5AC49, #3CA5A5);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    nav h1 {
+      font-size: 1.5rem;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #FFA500;
+    }
+
+    /* --- Burger menu --- */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      background: white;
+      height: 3px;
+      width: 25px;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(135deg, #3CA55C, #B5AC49, #3CA5A5);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    /* --- Formulaire --- */
+    .contact-container {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 100%;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .contact-container p {
+      margin-bottom: 25px;
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      background: #fffb00;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      background: #e69500;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: linear-gradient(135deg, #3CA55C, #B5AC49, #3CA5A5);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    /* --- Responsive ajustements --- */
+    @media (max-width: 600px) {
+      .contact-container {
+        padding: 20px;
+      }
+      .contact-container h2 {
+        font-size: 1.4rem;
+      }
+      .contact-container p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <h1>Contact</h1>
+    <div class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="dinos.html">Dinosaures</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <div class="contact-container">
+      <h2>Contactez-nous</h2>
+      <p>Une question, une suggestion ? Envoyez-nous un message !</p>
+      <form>
+        <input type="text" placeholder="Votre nom" required>
+        <input type="email" placeholder="Votre email" required>
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 DinoWorld - Tous droits réservés</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

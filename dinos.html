@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-dinosaures">
+
+  <header>
+  <div class="nav-container">
+    <h1>Les Dinosaures</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="dinos.html" class="active">Dinosaures</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="contact.html">Contact</a>
+
+    </nav>
+  </div>
+  </header>
+
+  <main class="dinosaurs-page">
+    <section class="dino-section">
+  <div class="dino-card">
+    <img src="un tyrannosaure en dessin style bd.jpeg" alt="Tyrannosaurus Rex">
+    <h3>Tyrannosaurus Rex</h3>
+    <p>Un des plus grands prédateurs terrestres ayant jamais existé.</p>
+    <button class="btn-dino" data-sound="7474.mp3">🔊 Écouter le T-Rex</button>
+  </div>
+
+  <div class="dino-card">
+    <img src="un tricératops en dessin style bd (1).jpeg" alt="Tricératops">
+    <h3>Tricératops</h3>
+    <p>Reconnaissable à ses trois cornes et sa grande collerette osseuse.</p>
+    <button class="btn-dino" data-sound="16451.mp3">🔊 Écouter le Tricératops</button>
+  </div>
+
+  <div class="dino-card">
+    <img src="un stégosaure en dessin style bd, une image où l'on voit tout le dinosaure.jpeg" alt="Stégosaure" />
+        <h3>Stégosaure</h3>
+        <p>Reconnaissable à ses plaques dorsales et sa queue armée de pointes défensives.</p>
+        <button class="btn-dino" data-sound="7483.mp3">🔊 Écouter le Stégosaure</button>
+  </div>
+
+  <!-- Ajoute autant de cartes que tu veux -->
+</section>
+  </main>
+
+  <footer>
+    <p>© 2025 DinoWorld - Tous droits réservés</p>
+  </footer>
+
+  <audio id="dino-audio" preload="auto"></audio>
+
+    <script src="dinosaures.js"></script>
+    
+</body>
+</html>

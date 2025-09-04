@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Dinosaures</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-quiz">
+
+  <header>
+    <div class="nav-container">
+      <h1>Quiz Dino</h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="dinos.html">Dinosaures</a>
+        <a href="quiz.html" class="active">Quiz</a>
+        <a href="contact.html">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="quiz-container">
+      <h2>Teste tes connaissances sur les dinosaures 🦖</h2>
+
+      <form id="quiz-form">
+        
+        <div class="question">
+          <p>1. Quel dinosaure avait trois cornes sur la tête ?</p>
+          <div class="options">
+            <label><input type="radio" name="q1" value="Tricératops"> Tricératops</label>
+            <label><input type="radio" name="q1" value="Stégosaure"> Stégosaure</label>
+            <label><input type="radio" name="q1" value="Vélociraptor"> Vélociraptor</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>2. Le Tyrannosaurus Rex était principalement...</p>
+          <div class="options">
+            <label><input type="radio" name="q2" value="Herbivore"> Herbivore</label>
+            <label><input type="radio" name="q2" value="Carnivore"> Carnivore</label>
+            <label><input type="radio" name="q2" value="Omnivore"> Omnivore</label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>3. Le stégosaure est célèbre pour...</p>
+          <div class="options">
+            <label><input type="radio" name="q3" value="Ses plaques dorsales"> Ses plaques dorsales</label>
+            <label><input type="radio" name="q3" value="Ses grandes ailes"> Ses grandes ailes</label>
+            <label><input type="radio" name="q3" value="Ses griffes acérées"> Ses griffes acérées</label>
+          </div>
+        </div>
+
+        <div class="btn-container">
+          <button type="button" class="btn" id="submit">Voir le résultat</button>
+          <button type="button" class="btn" id="restart" style="display:none;">Recommencer</button>
+        </div>
+
+      </form>
+
+      <div class="result" id="result"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 DinoWorld - Tous droits réservés</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
