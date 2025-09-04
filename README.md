@@ -2,7 +2,7 @@
 
 Petit site fun et moderne sur les dinosaures, réalisé en **HTML / CSS / JavaScript**.  
 
-👉 [Voir la démo en ligne](https://github.com/Jeremy-bell-27/DinoWorld.git/)  
+👉 [Voir la démo en ligne](https://jeremy-bell-27.github.io/DinoWorld/)  
 
 ## ✨ Fonctionnalités
 - Présentation immersive des dinosaures
@@ -10,4 +10,5 @@ Petit site fun et moderne sur les dinosaures, réalisé en **HTML / CSS / JavaSc
 - Responsive (adapté au mobile)
 
 ## 🎯 Objectif
+
 Projet personnel pour progresser en développement web et enrichir mon portfolio.
